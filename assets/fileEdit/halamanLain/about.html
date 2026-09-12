@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Tentang Kami — Wi-San</title>
+  <meta name="description" content="Kenali lebih dekat Wi-San, penyedia layanan internet rumah dan bisnis." />
+
+  <!-- GANTI: Favicon — sesuai logo asli Wi-San -->
+  <link rel="icon" href="https://placehold.co/64x64/0b0f14/39ff88?text=WS" type="image/png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="../style/gasubah.css "/>
+</head>
+<body>
+
+
+  <!-- ================= HEADER (sama seperti index.html) ================= -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+
+      <a href="../../../index.html" class="brand">
+        <span class="brand-mark">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 30C21.6569 30 23 28.6569 23 27C23 25.3431 21.6569 24 20 24C18.3431 24 17 25.3431 17 27C17 28.6569 18.3431 30 20 30Z" fill="url(#g1b)"/>
+            <path d="M12 21C15.5 17.5 24.5 17.5 28 21" stroke="url(#g2b)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M6 14C13.5 6.5 26.5 6.5 34 14" stroke="url(#g3b)" stroke-width="3" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="g1b" x1="17" y1="24" x2="23" y2="30"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#39FF88"/></linearGradient>
+              <linearGradient id="g2b" x1="12" y1="18" x2="28" y2="18"><stop stop-color="#FF2EC4"/><stop offset="1" stop-color="#00E5FF"/></linearGradient>
+              <linearGradient id="g3b" x1="6" y1="10" x2="34" y2="10"><stop stop-color="#39FF88"/><stop offset="1" stop-color="#FF2EC4"/></linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-name">Wi-San</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="../../index.html#beranda" class="nav-link">Beranda</a>
+        <a href="../../../index.html#produk" class="nav-link">Produk</a>
+        <a href="../../../index.html#promo" class="nav-link">Promo</a>
+        <a href="../../../index.html#sponsor" class="nav-link">Sponsor</a>
+        <a href="../../../index.html#kontak" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Buka menu pengaturan" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="settings-panel" id="settingsPanel">
+      <div class="settings-panel-inner">
+        <button class="settings-close" id="settingsClose" aria-label="Tutup panel">&times;</button>
+
+        <div class="settings-group">
+          <p class="settings-label">Tampilan</p>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+            <span id="themeToggleText">Mode Gelap</span>
+          </button>
+        </div>
+
+        <div class="settings-group settings-menu">
+          <p class="settings-label">Menu</p>
+          <a href="../../../index.html#beranda" class="settings-link">
+            <i class="fa-solid fa-house"></i> Kembali ke Beranda
+          </a>
+          <a href="../../../index.html#produk" class="settings-link">
+            <i class="fa-solid fa-box"></i> Produk
+          </a>
+          <a href="../../../index.html#promo" class="settings-link">
+            <i class="fa-solid fa-tag"></i> Promo
+          </a>
+          <a href="../../../index.html#sponsor" class="settings-link">
+            <i class="fa-solid fa-handshake"></i> Sponsor
+          </a>
+          <a href="../../../index.html#kontak" class="settings-link">
+            <i class="fa-solid fa-address-book"></i> Kontak
+          </a>
+          <a href="about.html" class="settings-link is-active">
+            <i class="fa-solid fa-circle-info"></i> Tentang Kami
+          </a>
+        </div>
+
+        <div class="settings-group settings-app">
+          <p class="settings-label">Aplikasi Wi-San</p>
+          <div class="app-card">
+            <img src="https://placehold.co/56x56/161d26/00e5ff?text=WS" alt="Logo Aplikasi Wi-San" class="app-card-logo" />
+            <div class="app-card-text">
+              <strong>Wi-San App</strong>
+              <span>Kelola paket & tagihan dari HP</span>
+            </div>
+          </div>
+          <a href="https://play.google.com/store" target="_blank" rel="noopener" class="playstore-badge">
+            <i class="fa-brands fa-google-play"></i>
+            <span>
+              <small>Unduh di</small>
+              Google Play
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <!-- ================= ABOUT HERO ================= -->
+  <section class="about-hero">
+    <div class="about-hero-inner">
+      <a href="../../../index.html" class="back-home-link">
+        <i class="fa-solid fa-arrow-left"></i> Kembali ke Beranda
+      </a>
+      <p class="hero-eyebrow">Tentang Kami</p>
+      <h1>Menghubungkan Indonesia, <span>Satu Sinyal Sekaligus</span></h1>
+      <p class="about-hero-desc">
+        <!-- GANTI: narasi tentang perusahaan Wi-San asli -->
+        Wi-San lahir dari mimpi sederhana: internet cepat dan stabil bukan lagi barang mewah, melainkan hak setiap rumah dan bisnis di Indonesia.
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= VISI & MISI ================= -->
+  <section class="about-section">
+    <div class="about-grid">
+      <div class="about-card">
+        <i class="fa-solid fa-bullseye about-icon"></i>
+        <h3>Visi</h3>
+        <!-- GANTI: visi perusahaan asli -->
+        <p>Menjadi penyedia layanan internet paling terpercaya dan terjangkau di Indonesia pada tahun 2030.</p>
+      </div>
+      <div class="about-card">
+        <i class="fa-solid fa-compass about-icon"></i>
+        <h3>Misi</h3>
+        <!-- GANTI: misi perusahaan asli -->
+        <p>Membangun jaringan fiber optik yang luas, memberi layanan pelanggan yang responsif, dan menghadirkan harga yang adil untuk semua kalangan.</p>
+      </div>
+      <div class="about-card">
+        <i class="fa-solid fa-heart about-icon"></i>
+        <h3>Nilai Kami</h3>
+        <!-- GANTI: nilai-nilai perusahaan asli -->
+        <p>Jujur, cepat tanggap, dan selalu mengutamakan kenyamanan pelanggan dalam setiap layanan yang kami berikan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PERJALANAN / TIMELINE ================= -->
+  <section class="about-section about-timeline-section">
+    <div class="section-head">
+      <h2>Perjalanan Wi-San</h2>
+      <p>Langkah demi langkah membangun jaringan yang kamu percaya.</p>
+    </div>
+
+    <div class="timeline">
+      <!-- GANTI: sejarah/tonggak perusahaan asli -->
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="timeline-year">2019</span>
+          <h4>Wi-San Didirikan</h4>
+          <p>Bermula dari sebuah tim kecil dengan semangat menghadirkan internet murah untuk daerah terpencil.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="timeline-year">2021</span>
+          <h4>Ekspansi ke 10 Provinsi</h4>
+          <p>Jaringan fiber optik Wi-San mulai menjangkau kota-kota besar di luar Jawa.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="timeline-year">2023</span>
+          <h4>Peluncuran Aplikasi Wi-San</h4>
+          <p>Pelanggan kini bisa memantau tagihan dan kecepatan internet langsung dari genggaman.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <span class="timeline-dot"></span>
+        <div class="timeline-content">
+          <span class="timeline-year">2026</span>
+          <h4>120.000+ Pelanggan Terhubung</h4>
+          <p>Wi-San terus tumbuh dan hadir di 24 provinsi dengan dukungan tim 24 jam.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= TIM ================= -->
+  <section class="about-section">
+    <div class="section-head">
+      <h2>Tim di Balik Wi-San</h2>
+      <p>Orang-orang yang memastikan koneksimu tetap menyala.</p>
+    </div>
+
+    <div class="team-grid">
+      <!-- GANTI: data anggota tim asli -->
+      <div class="team-card">
+        <img src="../../gambarTeam/Sucipto.jpg" alt="Foto anggota" />
+        <h4>Sucipto</h4>
+        <span>Manejer / QA</span>
+      </div>
+      <div class="team-card">
+        <img src="../../gambarTeam/adudud.jpg" alt="Foto anggota tim" />
+        <h4>Adudu</h4>
+        <span>Lawan hacker / Lawan Boboiboy</span>
+      </div>
+      <div class="team-card">
+        <img src="../../gambarTeam/dalang.jpg" alt="Foto anggota tim" />
+        <h4>Tok Dalang</h4>
+        <span>Manejemen / Keuangan</span>
+      </div>
+      <div class="team-card">
+        <img src="../../gambarTeam/bkeke.jpg" alt="Foto anggota tim" />
+        <h4>Bakekok</h4>
+        <span>Hewan / Kucing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA ================= -->
+  <section class="about-cta">
+    <h2>Siap terhubung dengan Wi-San?</h2>
+    <p>Pasang layanan Wi-San sekarang dan rasakan bedanya.</p>
+    <a href="../../../index.html#produk" class="btn btn-primary">Lihat Paket Internet</a>
+  </section>
+
+  <!-- ================= FOOTER (sama seperti index.html) ================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-about">
+        <div class="brand">
+          <span class="brand-mark">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 30C21.6569 30 23 28.6569 23 27C23 25.3431 21.6569 24 20 24C18.3431 24 17 25.3431 17 27C17 28.6569 18.3431 30 20 30Z" fill="#39FF88"/>
+              <path d="M12 21C15.5 17.5 24.5 17.5 28 21" stroke="#00E5FF" stroke-width="3" stroke-linecap="round"/>
+              <path d="M6 14C13.5 6.5 26.5 6.5 34 14" stroke="#FF2EC4" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Wi-San</span>
+        </div>
+        <p>Wi-San adalah penyedia layanan internet rumah dan bisnis yang berfokus pada kecepatan, kestabilan, dan kepuasan pelanggan di seluruh Indonesia.</p>
+
+        <div class="footer-social">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Wi-San"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Wi-San"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Wi-San"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tautan</h4>
+        <ul>
+          <li><a href="../../../index.html#beranda">Beranda</a></li>
+          <li><a href="../../../index.html#produk">Produk</a></li>
+          <li><a href="../../../index.html#promo">Promo</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto: bobsicangsai7@gmail.com">bobsicangsai7@gmail.com</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+62001002003">(+62) 001002003</a></li>
+          <li><i class="fa-solid fa-location-dot"></i> Medan, Pasar 4, Gang Istiqomah</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Unduh Aplikasi</h4>
+        <p class="footer-app-desc">Pantau tagihan dan kecepatan internetmu lewat aplikasi Wi-San.</p>
+        <a href="https://play.google.com/store/apps/details?id=com.dts.freefireth" target="_blank" rel="noopener" class="playstore-badge footer-playstore">
+          <i class="fa-brands fa-google-play"></i>
+          <span>
+            <small>Unduh di</small>
+            Google Play
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+   
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Wi-San. Proyek tugas sekolah — bukan perusahaan resmi.</p>
+      <div class="footer-legal">
+        <a href="#" id="linkPrivacy">Kebijakan Privasi</a>
+        <a href="#" id="linkTerms">Syarat &amp; Ketentuan</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+  
+    <!-- Modal Pop-up Kebijakan Privasi & Syarat Ketentuan -->
+  <div class="modal-overlay" id="legalModal">
+    <div class="modal-box modal-legal-box">
+      <button class="modal-close" id="legalModalClose" aria-label="Tutup">&times;</button>
+      <div class="modal-body modal-legal-body">
+        <h3 id="legalModalTitle">Kebijakan Privasi</h3>
+        <div class="legal-content" id="legalModalContent">
+          <!-- Isi teks muncul otomatis dari JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="../js/jang.js"></script>
+  
+  
+  
+</body>
+</html>
