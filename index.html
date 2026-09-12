@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wi-San — Internet Cepat, Hidup Makin Kencang</title>
+  <meta name="description" content="Wi-San, penyedia layanan WiFi rumah dan bisnis dengan koneksi cepat dan stabil." />
+
+  <!-- GANTI: Favicon — sesuai logo asli Wi-San -->
+  <link rel="icon" href="https://placehold.co/64x64/0b0f14/39ff88?text=WS" type="image/png" />
+
+  <!-- Font dari Google Fonts: Space Grotesk (judul) & Inter (teks) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Ikon (Font Awesome, untuk ikon sosial media & panah) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="assets/fileEdit/style/gasubah.css" />
+</head>
+
+
+<body class = "is-loading">
+  
+  <div class="splash-screen" id="splashScreen" role="status" aria-live="polite">
+  <div class="splash-glow"></div>
+  <div class="splash-content">
+    <span class="splash-mark">
+      <svg width="42" height="42" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 30C21.6569 30 23 28.6569 23 27C23 25.3431 21.6569 24 20 24C18.3431 24 17 25.3431 17 27C17 28.6569 18.3431 30 20 30Z" fill="url(#sg1)"/>
+        <path d="M12 21C15.5 17.5 24.5 17.5 28 21" stroke="url(#sg2)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M6 14C13.5 6.5 26.5 6.5 34 14" stroke="url(#sg3)" stroke-width="3" stroke-linecap="round"/>
+        <defs>
+          <linearGradient id="sg1" x1="17" y1="24" x2="23" y2="30"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#39FF88"/></linearGradient>
+          <linearGradient id="sg2" x1="12" y1="18" x2="28" y2="18"><stop stop-color="#FF2EC4"/><stop offset="1" stop-color="#00E5FF"/></linearGradient>
+          <linearGradient id="sg3" x1="6" y1="10" x2="34" y2="10"><stop stop-color="#39FF88"/><stop offset="1" stop-color="#FF2EC4"/></linearGradient>
+        </defs>
+      </svg>
+    </span>
+    <h1 class="splash-title">
+      <span class="splash-word" style="--d:0">Selamat</span>
+      <span class="splash-word" style="--d:1">Datang</span>
+    </h1>
+    <p class="splash-sub" style="--d:2">di Wi-San — Internet Cepat, Hidup Makin Kencang</p>
+    <div class="splash-loader" style="--d:3"><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="header">
+    <div class="header-inner">
+
+      <a href="index.html" class="brand">
+        <!-- GANTI: logo asli Wi-San (SVG/PNG) -->
+        <span class="brand-mark">
+          <svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 30C21.6569 30 23 28.6569 23 27C23 25.3431 21.6569 24 20 24C18.3431 24 17 25.3431 17 27C17 28.6569 18.3431 30 20 30Z" fill="url(#g1)"/>
+            <path d="M12 21C15.5 17.5 24.5 17.5 28 21" stroke="url(#g2)" stroke-width="3" stroke-linecap="round"/>
+            <path d="M6 14C13.5 6.5 26.5 6.5 34 14" stroke="url(#g3)" stroke-width="3" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="g1" x1="17" y1="24" x2="23" y2="30"><stop stop-color="#00E5FF"/><stop offset="1" stop-color="#39FF88"/></linearGradient>
+              <linearGradient id="g2" x1="12" y1="18" x2="28" y2="18"><stop stop-color="#FF2EC4"/><stop offset="1" stop-color="#00E5FF"/></linearGradient>
+              <linearGradient id="g3" x1="6" y1="10" x2="34" y2="10"><stop stop-color="#39FF88"/><stop offset="1" stop-color="#FF2EC4"/></linearGradient>
+            </defs>
+          </svg>
+        </span>
+        <span class="brand-name">Wi-San</span>
+      </a>
+
+      <!-- Menu navigasi untuk pindah antar bagian dengan cepat -->
+      <nav class="main-nav" id="mainNav">
+        <a href="#beranda" class="nav-link">Beranda</a>
+        <a href="#produk" class="nav-link">Produk</a>
+        <a href="#promo" class="nav-link">Promo</a>
+        <a href="#sponsor" class="nav-link">Sponsor</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Tombol garis tiga (hamburger) -->
+        <button class="hamburger-btn" id="hamburgerBtn" aria-label="Buka menu pengaturan" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Panel pengaturan yang muncul dari tombol garis tiga -->
+    <div class="settings-panel" id="settingsPanel">
+      <div class="settings-panel-inner">
+
+        <button class="settings-close" id="settingsClose" aria-label="Tutup panel">&times;</button>
+
+        <div class="settings-group">
+          <p class="settings-label">Tampilan</p>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+            <span id="themeToggleText">Mode Gelap</span>
+          </button>
+        </div>
+
+        <div class="settings-group settings-menu">
+          <p class="settings-label">Menu</p>
+          <a href="#beranda" class="settings-link is-active">
+            <i class="fa-solid fa-house"></i> Beranda
+          </a>
+          <a href="#produk" class="settings-link">
+            <i class="fa-solid fa-box"></i> Produk
+          </a>
+          <a href="#promo" class="settings-link">
+            <i class="fa-solid fa-tag"></i> Promo
+          </a>
+          <a href="#sponsor" class="settings-link">
+            <i class="fa-solid fa-handshake"></i> Sponsor
+          </a>
+          <a href="#kontak" class="settings-link">
+            <i class="fa-solid fa-address-book"></i> Kontak
+          </a>
+          <a href="assets/fileEdit/halamanLain/about.html" class="settings-link">
+            <i class="fa-solid fa-circle-info"></i> Tentang Kami
+          </a>
+        </div>
+
+        <div class="settings-group settings-app">
+          <p class="settings-label">Aplikasi Wi-San</p>
+          <div class="app-card">
+            <!-- GANTI: logo aplikasi Wi-San asli -->
+            <img src="https://placehold.co/56x56/161d26/00e5ff?text=WS" alt="Logo Aplikasi Wi-San" class="app-card-logo" />
+            <div class="app-card-text">
+              <strong>Wi-San App</strong>
+              <span>Kelola paket & tagihan dari HP</span>
+            </div>
+          </div>
+          <!-- GANTI: tautan Play Store asli aplikasi Wi-San -->
+          <a href="https://play.google.com/store" target="_blank" rel="noopener" class="playstore-badge">
+            <i class="fa-brands fa-google-play"></i>
+            <span>
+              <small>Unduh di</small>
+              Google Play
+            </span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="overlay" id="overlay"></div>
+  </header>
+
+  <!-- ================= HERO / SLIDER ================= -->
+  <section class="hero" id="beranda">
+    <div class="hero-slider" id="heroSlider">
+
+      <!-- Slide 1 -->
+      <div class="hero-slide is-active">
+        <!-- GANTI: foto rumah/kota berjaringan Wi-San asli -->
+        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1920&auto=format&fit=crop" alt="Jaringan internet cepat di rumah" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <!-- GANTI: foto teknisi memasang jaringan Wi-San asli -->
+        <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1920&auto=format&fit=crop" alt="Teknisi memasang jaringan fiber optik" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="hero-slide">
+        <!-- GANTI: foto keluarga/kantor memakai internet Wi-San asli -->
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1920&auto=format&fit=crop" alt="Keluarga menikmati internet cepat" />
+      </div>
+
+      <div class="hero-gradient"></div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Internet Rumah &amp; Bisnis</p>
+        <h1 class="hero-title">Koneksi Secepat Cahaya, <span>Sekencang Wi-San</span></h1>
+        <p class="hero-desc">
+          <!-- GANTI: Deskripsi singkat sesuai keunggulan layanan Wi-San asli -->
+          Nikmati internet fiber optik stabil tanpa lag, dukungan 24 jam, dan harga yang ramah di kantong untuk rumah maupun bisnis kamu.
+        </p>
+        <div class="hero-buttons">
+          <a href="#produk" class="btn btn-primary">Lihat Paket</a>
+          <a href="#kontak" class="btn btn-outline">Hubungi Kami</a>
+        </div>
+      </div>
+
+      <!-- Panah + titik indikator digabung jadi satu baris kontrol di bawah teks, supaya tidak pernah menimpa judul -->
+      <div class="hero-controls">
+        <button class="hero-nav hero-nav-prev" id="heroPrev" aria-label="Slide sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="hero-dots" id="heroDots"></div>
+        <button class="hero-nav hero-nav-next" id="heroNext" aria-label="Slide berikutnya"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= STATISTIK / TESTIMONI SINGKAT ================= -->
+  <section class="stats" id="statistik">
+    <div class="stats-inner">
+      <div class="stat-card">
+        <span class="stat-number" data-count="120000">0</span>
+        <span class="stat-suffix">+</span>
+        <p class="stat-label">Pelanggan Terhubung</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-count="24">0</span>
+        <p class="stat-label">Provinsi Terjangkau</p>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" data-count="98">0</span>
+        <span class="stat-suffix">%</span>
+        <p class="stat-label">Pelanggan Puas</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= OUR PRODUK ================= -->
+  <section class="products" id="produk">
+    <div class="section-head">
+      <h2>OUR PRODUCT</h2>
+      <p>Pilih paket yang paling cocok dengan kebutuhan internetmu — geser atau tekan panah untuk melihat semuanya.</p>
+    </div>
+
+    <div class="carousel" id="productCarousel">
+      <button class="carousel-arrow carousel-arrow-left" data-target="productTrack" aria-label="Geser ke kiri"><i class="fa-solid fa-chevron-left"></i></button>
+
+      <div class="carousel-track" id="productTrack">
+
+        <!-- Produk 1 -->
+        <article class="product-card" data-modal-title="Wi-San Lite" data-modal-desc="Paket hemat untuk kebutuhan browsing dan media sosial sehari-hari. Cocok untuk 1-2 perangkat." data-modal-price="Rp 149.000 / bulan" data-modal-img="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop">
+          <!-- GANTI: gambar paket produk asli -->
+          <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=800&auto=format&fit=crop" alt="Paket Wi-San Lite" />
+          <div class="product-info">
+            <h3>Wi-San Lite</h3>
+            <p>20 Mbps · untuk kebutuhan ringan</p>
+            <span class="product-price">Rp 149.000/bln</span>
+          </div>
+        </article>
+
+        <!-- Produk 2 -->
+        <article class="product-card" data-modal-title="Wi-San Home" data-modal-desc="Paket andalan keluarga, stabil untuk streaming, video call, dan bermain game daring bersama." data-modal-price="Rp 249.000 / bulan" data-modal-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop">
+          <!-- GANTI: gambar paket produk asli -->
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Paket Wi-San Home" />
+          <div class="product-info">
+            <h3>Wi-San Home</h3>
+            <p>50 Mbps · untuk keluarga</p>
+            <span class="product-price">Rp 249.000/bln</span>
+          </div>
+        </article>
+
+        <!-- Produk 3 -->
+        <article class="product-card" data-modal-title="Wi-San Pro" data-modal-desc="Kecepatan tinggi untuk content creator, gamer, dan pekerja remote yang butuh koneksi tanpa lag." data-modal-price="Rp 399.000 / bulan" data-modal-img="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop">
+          <!-- GANTI: gambar paket produk asli -->
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=800&auto=format&fit=crop" alt="Paket Wi-San Pro" />
+          <div class="product-info">
+            <h3>Wi-San Pro</h3>
+            <p>100 Mbps · untuk profesional</p>
+            <span class="product-price">Rp 399.000/bln</span>
+          </div>
+        </article>
+
+        <!-- Produk 4 -->
+        <article class="product-card" data-modal-title="Wi-San Business" data-modal-desc="Solusi jaringan untuk kantor dan usaha kecil-menengah dengan uptime tinggi dan dukungan prioritas." data-modal-price="Rp 799.000 / bulan" data-modal-img="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop">
+          <!-- GANTI: gambar paket produk asli -->
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="Paket Wi-San Business" />
+          <div class="product-info">
+            <h3>Wi-San Business</h3>
+            <p>200 Mbps · untuk bisnis</p>
+            <span class="product-price">Rp 799.000/bln</span>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="carousel-arrow carousel-arrow-right" data-target="productTrack" aria-label="Geser ke kanan"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Modal detail produk (muncul saat kartu produk ditekan) -->
+<div class="modal-overlay" id="productModal">
+  <div class="modal-box">
+    <button class="modal-close" id="productModalClose" aria-label="Tutup">&times;</button>
+    <img id="modalImg" src="" alt="" />
+    <div class="modal-body">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+      <span class="modal-price" id="modalPrice"></span>
+      <button type="button" class="btn btn-primary modal-cta" id="modalCtaBtn">Pasang Sekarang</button>
+    </div>
+  </div>
+</div>
+  
+  <!-- Pop-up Form Pemasangan (muncul saat tombol "Pasang Sekarang" ditekan) -->
+<div class="modal-overlay" id="orderModal">
+  <div class="modal-box modal-order-box">
+    <button class="modal-close" id="orderModalClose" aria-label="Tutup">&times;</button>
+
+
+
+    <div class="modal-body order-body">
+
+      <!-- Tahap 1: Form isian -->
+      <div class="order-step is-active" id="orderStepForm">
+        <h3>Form Pemasangan <span id="orderPackageName"></span></h3>
+        <p>Isi data di bawah ini untuk (simulasi) daftar pasang paket.</p>
+        
+        <form id="orderForm" novalidate>
+         <div class="form-field" id="fieldProvinsi">
+           <label for="orderProvinsi">Provinsi / Alamat</label>
+           <input type="text" id="orderProvinsi" placeholder="Contoh: Sumatera Utara, Medan...">
+           <span class="field-error" id="errProvinsi"></span>
+          </div>
+
+          <div class="form-field" id="fieldNama">
+            <label for="orderNama">Nama Lengkap</label>
+           <input type="text" id="orderNama" placeholder="Nama lengkap kamu">
+            <span class="field-error" id="errNama"></span>
+            </div>
+
+           <div class="form-field" id="fieldKontak">
+             <label for="orderKontakNumber">Nomor Kontak</label>
+              <div class="phone-field">
+                <select id="orderKontakCode" class="phone-code-select">
+                <option value="" selected>Kode</option>
+               </select>
+                <input type="tel" id="orderKontakNumber" inputmode="numeric" placeholder="8123456789 atau 08123456789">
+                </div>
+         <span class="field-error" id="errKontak"></span>
+          </div>
+
+          <div class="form-field" id="fieldEmail">
+            <label for="orderEmail">Gmail</label>
+           <input type="email" id="orderEmail" placeholder="contoh@gmail.com">
+           <span class="field-error" id="errEmail"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary order-submit">Kirim Pendaftaran</button>
+         </form>
+      </div>
+
+      <!-- Tahap 2: Ucapan terima kasih -->
+      <div class="order-step" id="orderStepThanks">
+        <div class="order-thanks-icon"><i class="fa-solid fa-circle-check"></i></div>
+        <h3>Terima kasih, <span id="orderThanksName">Kak</span>!</h3>
+        <p>
+          Pendaftaran paket <strong id="orderThanksPackage"></strong> kamu sudah "diterima".
+          Tim Wi-San (fiktif) akan menghubungimu. Ingat, ini cuma simulasi untuk tugas sekolah ya 🙌
+        </p>
+        <button type="button" class="btn btn-outline order-close-btn" id="orderThanksClose">Tutup</button>
+      </div>
+
+     </div>
+   </div>
+  </div>
+
+  <!-- ================= PROMO ================= -->
+  <section class="promo" id="promo">
+    <div class="section-head">
+      <h2>Promo</h2>
+      <p>Penawaran spesial yang sayang buat dilewatkan, geser atau tekan panah untuk lihat promo lainnya.</p>
+    </div>
+
+    <div class="carousel" id="promoCarousel">
+      <button class="carousel-arrow carousel-arrow-left" data-target="promoTrack" aria-label="Geser ke kiri"><i class="fa-solid fa-chevron-left"></i></button>
+
+      <div class="carousel-track" id="promoTrack">
+
+        <!-- Promo 1 -->
+        <article class="promo-card">
+          <!-- GANTI: gambar promo asli -->
+          <img src="assets/gambar promo/promo.png" alt="Promo pasang baru gratis biaya instalasi" />
+          <div class="promo-info">
+            <h3>Gratis Biaya Instalasi</h3>
+            <p>Pasang baru bulan ini, biaya pemasangan gratis 100%.</p>
+          </div>
+        </article>
+
+        <!-- Promo 2 -->
+        <article class="promo-card">
+          <!-- GANTI: gambar promo asli -->
+          <img src="assets/gambar promo/promo2.png" alt="Promo diskon upgrade paket" />
+          <div class="promo-info">
+            <h3>Diskon 30% Upgrade Paket</h3>
+            <p>Upgrade ke Wi-San Pro dan hemat 30% di 3 bulan pertama.</p>
+          </div>
+        </article>
+
+        <!-- Promo 3 -->
+        <article class="promo-card">
+          <!-- GANTI: gambar promo asli -->
+          <img src="assets/gambar promo/promo3.jpg" alt="Promo bonus router gratis" />
+          <div class="promo-info">
+            <h3>Bonus Router WiFi 6</h3>
+            <p>Setiap pendaftaran paket Home ke atas dapat router gratis.</p>
+          </div>
+        </article>
+
+        <!-- Promo 4 -->
+        <article class="promo-card">
+          <!-- GANTI: gambar promo asli -->
+          <img src="assets/gambar promo/promo4.png" alt="Promo referral ajak teman" />
+          <div class="promo-info">
+            <h3>Ajak Teman, Dapat Saldo</h3>
+            <p>Referensikan Wi-San ke teman dan dapatkan saldo Rp50.000.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <button class="carousel-arrow carousel-arrow-right" data-target="promoTrack" aria-label="Geser ke kanan"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- ================= SPONSOR ================= -->
+  <section class="sponsor" id="sponsor">
+    <div class="section-head">
+      <h2>Sponsor</h2>
+      <p>Wi-San dipercaya dan didukung oleh berbagai mitra.</p>
+    </div>
+
+    <div class="sponsor-grid">
+      <!-- GANTI: Seluruh logo & tautan sponsor dengan yang asli -->
+      <a href="https://www.telkomsel.com" target="_blank" rel="noopener" class="sponsor-logo">
+        <img src="assets/gambarMitra/Telkomsel.png" alt="Logo Sponsor 1" />
+      </a>
+      <a href="https://www.nasa.gov" target="_blank" rel="noopener" class="sponsor-logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/NASA_logo.svg/500px-NASA_logo.svg.png" alt="Logo NASA" width="200">
+      </a>
+      <a href="google.com" target="_blank" rel="noopener" class="sponsor-logo">
+        <img src="assets/gambarMitra/google.png" alt="Logo google" width="200">
+        
+      </a>
+      <a href="indihome.co.id" target="_blank" rel="noopener" class="sponsor-logo">
+        <img src="assets/gambarMitra/3840px-IndiHome_logo_2023.svg.png" alt="Logo IndiHome" width="200">
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer" id="kontak">
+    <div class="footer-inner">
+
+      <div class="footer-col footer-about">
+        <div class="brand">
+          <span class="brand-mark">
+            <svg width="26" height="26" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 30C21.6569 30 23 28.6569 23 27C23 25.3431 21.6569 24 20 24C18.3431 24 17 25.3431 17 27C17 28.6569 18.3431 30 20 30Z" fill="#39FF88"/>
+              <path d="M12 21C15.5 17.5 24.5 17.5 28 21" stroke="#00E5FF" stroke-width="3" stroke-linecap="round"/>
+              <path d="M6 14C13.5 6.5 26.5 6.5 34 14" stroke="#FF2EC4" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="brand-name">Wi-San</span>
+        </div>
+        <!-- GANTI: Deskripsi tentang perusahaan sesuai profil Wi-San asli -->
+        <p>Wi-San adalah penyedia layanan internet rumah dan bisnis yang berfokus pada kecepatan, kestabilan, dan kepuasan pelanggan di seluruh Indonesia.</p>
+
+        <div class="footer-social">
+          <!-- GANTI: tautan sosial media Wi-San asli -->
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram Wi-San"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok Wi-San"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook Wi-San"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Tautan</h4>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#promo">Promo</a></li>
+          <li><a href="about.html">Tentang Kami</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kontak</h4>
+        <ul class="footer-contact">
+          <!-- GANTI: email, nomor telepon, dan alamat asli Wi-San -->
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto: bobsicangsai7@gmail.com">bobsicangsai7@gmail.com</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+62001002003">(+62) 001002003 </a></li>
+          <li><i class="fa-solid fa-location-dot"></i> Medan, Pasar 4, Gang Istiqomah.</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Unduh Aplikasi</h4>
+        <p class="footer-app-desc">Pantau tagihan dan kecepatan internetmu lewat aplikasi Wi-San.</p>
+        <!-- GANTI: logo aplikasi & tautan Play Store asli -->
+        <a href="https://play.google.com/store/apps/details?id=com.dts.freefireth" target="_blank" rel="noopener" class="playstore-badge footer-playstore">
+          <i class="fa-brands fa-google-play"></i>
+          <span>
+            <small>Unduh di</small>
+            Google Play
+          </span>
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Wi-San. Proyek tugas sekolah — bukan perusahaan resmi.</p>
+      <div class="footer-legal">
+        <a href="#" id="linkPrivacy">Kebijakan Privasi</a>
+        <a href="#" id="linkTerms">Syarat &amp; Ketentuan</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Kembali ke atas"><i class="fa-solid fa-arrow-up"></i></button>
+   
+  <!-- Modal Pop-up Kebijakan Privasi & Syarat Ketentuan -->
+  <div class="modal-overlay" id="legalModal">
+    <div class="modal-box modal-legal-box">
+      <button class="modal-close" id="legalModalClose" aria-label="Tutup">&times;</button>
+      <div class="modal-body modal-legal-body">
+        <h3 id="legalModalTitle">Kebijakan Privasi</h3>
+        <div class="legal-content" id="legalModalContent">
+          <!-- Isi teks muncul otomatis dari JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/fileEdit/js/jang.js"></script>
+  
+  
+
+  <!-- Efek "coverflow" untuk kartu di Our Produk: kartu tengah membesar & terang,
+       kartu samping mengecil & redup. Hanya mengubah tampilan kartu — tidak
+       menyentuh tombol panah/nav yang sudah ada di jang.js, dan tetap bisa
+       digeser dengan tangan karena hanya mendengarkan event "scroll". -->
+  <script>
+    (function () {
+      const track = document.getElementById('productTrack');
+      if (!track) return;
+
+      function getCards() {
+        return Array.from(track.querySelectorAll('.product-card'));
+      }
+
+      function setEdgePadding() {
+        const cards = getCards();
+        if (!cards.length) return;
+        const cardWidth = cards[0].getBoundingClientRect().width;
+        const pad = Math.max((track.clientWidth - cardWidth) / 2, 0);
+        track.style.paddingLeft = pad + 'px';
+        track.style.paddingRight = pad + 'px';
+      }
+
+      function updateCoverflow() {
+        const cards = getCards();
+        if (!cards.length) return;
+        const trackRect = track.getBoundingClientRect();
+        const center = trackRect.left + trackRect.width / 2;
+
+        cards.forEach((card) => {
+          const r = card.getBoundingClientRect();
+          const cardCenter = r.left + r.width / 2;
+          const dist = Math.abs(cardCenter - center);
+          const norm = Math.min(dist / (trackRect.width / 2), 1); // 0 = tengah, 1 = tepi
+
+          const scale = 1 - norm * 0.24;
+          const opacity = 1 - norm * 0.55;
+          const bright = 1 - norm * 0.5;
+          const y = norm * 16;
+          const shadow = 0.45 - norm * 0.3;
+          const z = Math.round((1 - norm) * 100);
+
+          card.style.setProperty('--pc-scale', scale.toFixed(3));
+          card.style.setProperty('--pc-opacity', opacity.toFixed(3));
+          card.style.setProperty('--pc-bright', bright.toFixed(3));
+          card.style.setProperty('--pc-y', y.toFixed(1) + 'px');
+          card.style.setProperty('--pc-shadow', shadow.toFixed(3));
+          card.style.setProperty('--pc-z', z);
+        });
+      }
+
+      let ticking = false;
+      function onScroll() {
+        if (!ticking) {
+          window.requestAnimationFrame(() => {
+            updateCoverflow();
+            ticking = false;
+          });
+          ticking = true;
+        }
+      }
+
+      function refreshAll() {
+        setEdgePadding();
+        updateCoverflow();
+      }
+
+      track.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', refreshAll);
+      window.addEventListener('load', refreshAll);
+
+      // Jalankan langsung + sedikit delay untuk pastikan gambar sudah punya ukuran
+      refreshAll();
+      setTimeout(refreshAll, 200);
+    })();
+  </script>
+  
+  <script>
+  (function () {
+    const splash = document.getElementById('splashScreen');
+    if (!splash) return;
+
+    // Kalau splash sudah pernah tampil di sesi (tab) ini, langsung skip, tanpa animasi.
+    if (sessionStorage.getItem('wisanSplashShown')) {
+      document.body.classList.remove('is-loading');
+      splash.style.display = 'none';
+      return;
+    }
+
+    const HOLD_MS = 1500;
+    const HIDE_MS = 600;
+
+    function endSplash() {
+      document.body.classList.remove('is-loading');
+      splash.classList.add('splash-hide');
+      window.setTimeout(function () {
+        splash.setAttribute('aria-hidden', 'true');
+        splash.style.display = 'none';
+      }, HIDE_MS);
+    }
+
+    sessionStorage.setItem('wisanSplashShown', '1');
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.setTimeout(endSplash, prefersReduced ? 300 : HOLD_MS);
+  })();
+</script>
+  
+
+  
+</body>
+
+
+</html>
+
